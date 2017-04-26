@@ -26,19 +26,19 @@ public class A6Q7 {
             sieve[i] = sieve[i - 1] + 1;
 
         }
-        // fills in the 10 digits from 1 to 10 with the corresponding integer to represent it
+        // fills in the 10 digits from 1 to 100 with the corresponding integer to represent it
         for (int i = 1; i < 100; i++) {
             sieve2[i] = sieve2[i - 1] + 1;
         }
         // this will be used as a placeholder to check for non-prime numbers then eliminate with it
         int elim = 0;
 
-        // the digits 2 through 9 will have their multiples compared for elimination using this loop
+        // the digits 2 through 100 will have their multiples compared for elimination using this loop
         for (int i = 2; i <= 100; i++) {
             // makes elim equal every single possible multiple of the current digit being used and loops through every multiple possible in the array
             for (int x = 2; x < 1001; x++) {
                 elim = sieve2[i] * x;
-
+                
 
                 // checks the whole sieve array for the single multiple of the digit which was made "elim", eliminates it by making it equal -1
                 for (int q = 2; q < 1001; q++) {
